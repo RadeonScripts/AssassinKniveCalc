@@ -1,0 +1,649 @@
+local Api = shared.UniversalValueApi or loadstring(game:HttpGet"https://gitlab.com/te4224/Scripts/-/raw/main/misc-scripts/UniversalValueApi.lua")();
+local function getFrame()
+    --[=[
+        Made with ObjectToCodev1.2.0 by Radeon2501
+        Report any bugs to the user above.
+    ]=]
+    local function _New_(a)local b=a[1];table.remove(a,1);local c=Instance.new(b);local d=a[1];if d then c.Parent=d;table.remove(a,1);end;for K,V in next,a do c[K]=V;end;return c;end;
+
+    --objects
+    local Frame = _New_{"Frame",
+        BackgroundColor3 = Color3.fromRGB(39.00000147521496, 39.00000147521496, 39.00000147521496),
+        BackgroundTransparency = 0.699999988079071,
+        BorderSizePixel = 0,
+        Position = UDim2.new(0.43912020325660706, 0, 0.4647058844566345, 0),
+        Size = UDim2.new(0, 258, 0, 317),
+    };
+
+    local Title = _New_{"TextLabel", Frame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.8999999761581421,
+        BorderSizePixel = 0,
+        Name = "Title",
+        Size = UDim2.new(1, 0, 0, 34),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Universal Value Calculator",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 20,
+        TextStrokeTransparency = 0.800000011920929,
+    };
+
+    local Container = _New_{"Frame", Frame,
+        BackgroundColor3 = Color3.fromRGB(39.00000147521496, 39.00000147521496, 39.00000147521496),
+        BackgroundTransparency = 1,
+        BorderSizePixel = 0,
+        Name = "Container",
+        Position = UDim2.new(0, 0, 0, 61),
+        Size = UDim2.new(1, 0, 1, -44),
+    };
+
+    local KnivesFrame = _New_{"Frame", Container,
+        BackgroundColor3 = Color3.fromRGB(39.00000147521496, 39.00000147521496, 39.00000147521496),
+        BackgroundTransparency = 0.699999988079071,
+        Name = "KnivesFrame",
+        Position = UDim2.new(0, 0, 0, 60),
+        Size = UDim2.new(1, -20, 0, 65),
+    };
+
+    local Title_0 = _New_{"TextLabel", KnivesFrame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.8999999761581421,
+        BorderSizePixel = 0,
+        Name = "Title",
+        Size = UDim2.new(1, 0, 0, 30),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Knives",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 20,
+        TextStrokeTransparency = 0.800000011920929,
+    };
+
+    local Seperator = _New_{"Frame", Title_0,
+        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+        BorderSizePixel = 0,
+        Name = "Seperator",
+        Position = UDim2.new(0, 0, 1, -1),
+        Size = UDim2.new(1, 0, 0, 1),
+    };
+
+    local Value = _New_{"TextLabel", KnivesFrame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.8999999761581421,
+        BorderSizePixel = 0,
+        Name = "Value",
+        Position = UDim2.new(0, 4, 0, 35),
+        Size = UDim2.new(1, -8, 0, 30),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Value: 0",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 20,
+        TextStrokeTransparency = 0.800000011920929,
+        TextXAlignment = Enum.TextXAlignment.Left,
+    };
+
+    local UICorner = _New_{"UICorner", KnivesFrame,
+        CornerRadius = UDim.new(0, 5),
+    };
+
+    local UIListLayout = _New_{"UIListLayout", Container,
+        Padding = UDim.new(0, 5),
+        HorizontalAlignment = Enum.HorizontalAlignment.Center,
+        SortOrder = Enum.SortOrder.LayoutOrder,
+    };
+
+    local PetsFrame = _New_{"Frame", Container,
+        BackgroundColor3 = Color3.fromRGB(39.00000147521496, 39.00000147521496, 39.00000147521496),
+        BackgroundTransparency = 0.699999988079071,
+        Name = "PetsFrame",
+        Position = UDim2.new(0, 0, 0, 60),
+        Size = UDim2.new(1, -20, 0, 65),
+    };
+
+    local Title_1 = _New_{"TextLabel", PetsFrame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.8999999761581421,
+        BorderSizePixel = 0,
+        Name = "Title",
+        Size = UDim2.new(1, 0, 0, 30),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Pets",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 20,
+        TextStrokeTransparency = 0.800000011920929,
+    };
+
+    local Seperator_0 = _New_{"Frame", Title_1,
+        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+        BorderSizePixel = 0,
+        Name = "Seperator",
+        Position = UDim2.new(0, 0, 1, -1),
+        Size = UDim2.new(1, 0, 0, 1),
+    };
+
+    local Value_0 = _New_{"TextLabel", PetsFrame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.8999999761581421,
+        BorderSizePixel = 0,
+        Name = "Value",
+        Position = UDim2.new(0, 4, 0, 35),
+        Size = UDim2.new(1, -8, 0, 30),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Value: 0",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 20,
+        TextStrokeTransparency = 0.800000011920929,
+        TextXAlignment = Enum.TextXAlignment.Left,
+    };
+
+    local UICorner_0 = _New_{"UICorner", PetsFrame,
+        CornerRadius = UDim.new(0, 5),
+    };
+
+    local TotalFrame = _New_{"Frame", Container,
+        BackgroundColor3 = Color3.fromRGB(39.00000147521496, 39.00000147521496, 39.00000147521496),
+        BackgroundTransparency = 0.699999988079071,
+        Name = "TotalFrame",
+        Position = UDim2.new(0, 0, 0, 60),
+        Size = UDim2.new(1, -20, 0, 65),
+    };
+
+    local Title_2 = _New_{"TextLabel", TotalFrame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.8999999761581421,
+        BorderSizePixel = 0,
+        Name = "Title",
+        Size = UDim2.new(1, 0, 0, 30),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Total",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 20,
+        TextStrokeTransparency = 0.800000011920929,
+    };
+
+    local Seperator_1 = _New_{"Frame", Title_2,
+        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+        BorderSizePixel = 0,
+        Name = "Seperator",
+        Position = UDim2.new(0, 0, 1, -1),
+        Size = UDim2.new(1, 0, 0, 1),
+    };
+
+    local Value_1 = _New_{"TextLabel", TotalFrame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.8999999761581421,
+        BorderSizePixel = 0,
+        Name = "Value",
+        Position = UDim2.new(0, 4, 0, 35),
+        Size = UDim2.new(1, -8, 0, 30),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Value: 0",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 20,
+        TextStrokeTransparency = 0.800000011920929,
+        TextXAlignment = Enum.TextXAlignment.Left,
+    };
+
+    local UICorner_1 = _New_{"UICorner", TotalFrame,
+        CornerRadius = UDim.new(0, 5),
+    };
+
+    local Refresh = _New_{"TextButton", Frame,
+        Active = false,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.800000011920929,
+        BorderSizePixel = 0,
+        Name = "Refresh",
+        Position = UDim2.new(0, 10, 1, -41),
+        Selectable = false,
+        Size = UDim2.new(1, -20, 0, 24),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Refresh API",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 17,
+        TextStrokeTransparency = 0.800000011920929,
+    };
+
+    local UICorner_2 = _New_{"UICorner", Refresh,
+        CornerRadius = UDim.new(0, 5),
+    };
+
+    local UICorner_3 = _New_{"UICorner", Frame,
+        CornerRadius = UDim.new(0, 5),
+    };
+
+    local Credits = _New_{"TextLabel", Frame,
+        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+        BackgroundTransparency = 1,
+        BorderSizePixel = 0,
+        Name = "Credits",
+        Position = UDim2.new(0, 10, 1, -14),
+        Size = UDim2.new(1, -20, 0, 10),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "Radeon#2501 Creds to Tech Hog!",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 14,
+        TextTransparency = 0.3199999928474426,
+        TextWrapped = true,
+        TextXAlignment = Enum.TextXAlignment.Left,
+    };
+
+    local SubTitle = _New_{"TextLabel", Frame,
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.949999988079071,
+        BorderSizePixel = 0,
+        Name = "SubTitle",
+        Position = UDim2.new(0, 0, 0, 34),
+        Size = UDim2.new(1, 0, 0, 17),
+        Font = Enum.Font.Ubuntu,
+        FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        Text = "SubTitle",
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        TextSize = 15,
+        TextStrokeTransparency = 0.800000011920929,
+    };
+
+    return Frame;
+end;
+local FrameSize; do 
+    local frame = getFrame();
+    FrameSize = frame.Size;
+    frame:Destroy();
+end;
+
+local RefreshDebounce = false;
+local RefreshButtons = {};
+local function requestRefresh()
+    if RefreshDebounce then
+        return;
+    end;
+    RefreshDebounce = true;
+    for _, Button in next, RefreshButtons do
+        Button.Text = "Refreshing...";
+    end;
+
+    Api:refresh();
+    RefreshDebounce = false;
+    for _, Button in next, RefreshButtons do
+        Button.Text = "Refresh API";
+    end;
+end;
+
+local function createFrameFromInfo(Info)
+    local Frame = getFrame();
+
+    for K, V in next, Info do
+        local Old = Frame[K];
+        local Type = typeof(Old);
+        if Type == "Instance" then -- this is for Title and SubTitle
+            for k, v in next, V do
+                Old[k] = v;
+            end;
+        else
+            Frame[K] = V;
+        end;
+    end;
+
+    return Frame;
+end;
+local function createValuesFromFrame(Frame)
+    local Knives = {};
+    local Pets = {};
+
+    local Container = Frame.Container;
+    local KnivesValueLabel = Container.KnivesFrame.Value;
+    local PetsValueLabel = Container.PetsFrame.Value;
+    local TotalValueLabel = Container.TotalFrame.Value;
+    local function update()
+        local KnivesValue = Api:calculate(Knives);
+        local PetsValue = Api:calculate(Pets);
+        local TotalValue = KnivesValue + PetsValue;
+
+        KnivesValueLabel.Text = "Value: " .. Api:format(KnivesValue);
+        PetsValueLabel.Text = "Value: " .. Api:format(PetsValue);
+        TotalValueLabel.Text = "Value: " .. Api:format(TotalValue);
+    end;
+    return {
+        Knives = setmetatable({}, {__index = Knives, __newindex = function(self, key, value)
+            if value then
+                Knives[key] = value;
+            else
+                Knives[key] = nil;
+            end;
+            update();
+        end}),
+        Pets = setmetatable({}, {__index = Pets, __newindex = function(self, key, value)
+            if value then
+                Pets[key] = value;
+            else
+                Pets[key] = nil;
+            end;
+            update();
+        end})
+    }, update;
+end;
+if Api.Game == "Assassin" then
+    local ItemsModule = require(game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Items"));
+    local Items = {
+        Pets = debug.getupvalue(ItemsModule.PetExists, 1),
+        Knives = debug.getupvalue(ItemsModule.GetAllKnives, 1),
+    };
+    local DefaultAllowedClassNames = {"ImageButton"};
+
+    local function addFrame(Info, Containers, AllowedClassNames)
+        AllowedClassNames = AllowedClassNames or DefaultAllowedClassNames;
+        for k,v in next, AllowedClassNames do
+            AllowedClassNames[v] = true;
+        end;
+
+        local Frame = createFrameFromInfo(Info);
+        local Values, update = createValuesFromFrame(Frame);
+
+        for _, Container in next, Containers do
+            local function childAdded(Child)
+                if not AllowedClassNames[Child.ClassName] then
+                    return;
+                end;
+
+                local Name = Child:WaitForChild("ItemName").Text;
+                -- print(Name, Api.Values[Name:upper()]);
+                if (not Items.Pets[Name] and not Items.Knives[Name]) or not Api.Values[Name:upper()] then
+                    return;
+                end;
+                local Num = Child:WaitForChild("Num");
+                local Amount = Num.Text;
+                local Table = (Items.Pets[Name] and Values.Pets) or Values.Knives;
+                Table[Name] = tonumber(Amount:sub(2, -1)) or 1;
+                Num:GetPropertyChangedSignal("Text"):Connect(function()
+                    ((Items.Pets[Name] and Values.Pets) or Values.Knives)[Name] = tonumber(Num.Text:sub(2, -1)) or 1; -- the sub cuts off first character. x10 -> 10;
+                end);
+            end;
+            local function childRemoved(Child)
+                if not AllowedClassNames[Child.ClassName] then
+                    return;
+                end;
+
+                local Name = Child:WaitForChild("ItemName").Text;
+                if (not Items.Pets[Name] and not Items.Knives[Name]) or not Api.Values[Name:upper()] then
+                    return;
+                end;
+                ((Items.Pets[Name] and Values.Pets) or Values.Knives)[Name] = nil;
+            end;
+            for _, Child in next, Container:GetChildren() do
+                childAdded(Child);
+            end;
+            Container.ChildAdded:Connect(childAdded);
+            Container.ChildRemoved:Connect(childRemoved);
+        end;
+
+        table.insert(RefreshButtons, Frame.Refresh);
+        Frame.Refresh.MouseButton1Click:Connect(function()
+            requestRefresh();
+            update();
+        end);
+    end;
+
+    local UI = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("ScreenGui"):WaitForChild("UI");
+    do -- Inventory
+        local Inventory = UI:WaitForChild("Inventory");
+        addFrame(
+            {
+                Parent = Inventory,
+                SubTitle = {
+                    Text = "Inventory"
+                },
+                Position = UDim2.fromScale(1, 0)
+            }, {
+                Inventory:WaitForChild("KnifeInv"):WaitForChild("KnifeGrid"),
+                Inventory:WaitForChild("PetsInv"):WaitForChild("PetGrid")
+            }
+        );
+    end;
+
+    local TradeScreen = UI:WaitForChild("TradeScreen");
+    local TradeInfo = TradeScreen:WaitForChild("Frame"):WaitForChild("TradeInfo");
+    do --Trade Offer
+        addFrame(
+            {
+                Parent = TradeScreen,
+                SubTitle = {
+                    Text = "Offering"
+                },
+                Position = UDim2.new(0.5, 360 -(FrameSize.X.Offset/2) - FrameSize.X.Offset / 2, 0, 20),
+            },
+            {
+                TradeInfo:WaitForChild("OfferInput"):WaitForChild("Frame")
+            }
+        );
+    end;
+    do --Trade Receive
+        addFrame(
+            {
+                Parent = TradeScreen,
+                SubTitle = {
+                    Text = "Receiving"
+                },
+                Position = UDim2.new(0.5, 360 -(FrameSize.X.Offset/2) + FrameSize.X.Offset / 2, 0, 20),
+            },
+            {
+                TradeInfo:WaitForChild("ReceiveInput"):WaitForChild("Frame")
+            },
+            {
+                "Frame"
+            }
+        );
+    end;
+    do -- Inspecting
+        local InspectHold = UI:WaitForChild("Trading"):WaitForChild("InspectHold");
+        addFrame(
+            {
+                Parent = InspectHold.Parent,
+                SubTitle = {
+                    Text = "Inspecting"
+                },
+                Position = UDim2.fromScale(1, 0)
+            },
+            {
+                InspectHold:WaitForChild("KnifeGrid"),
+                InspectHold:WaitForChild("PetGrid")
+            },
+            {
+                "Frame"
+            }
+        );
+    end;
+elseif Api.Game == "MurderMystery2" then
+    local DatabasePets = getrenv()._G.Database.Pets;
+    local function getNameObjectFromItem(Item)
+        local ItemName = Item:WaitForChild("ItemName");
+        if ItemName.ClassName == "TextLabel" then
+            return ItemName;
+        end;
+        return ItemName:WaitForChild("Label");
+    end;
+
+    local DefaultAllowedClassNames = {"Frame"}
+    local function addFrame(Info, Containers, AllowedClassNames)
+        AllowedClassNames = AllowedClassNames or DefaultAllowedClassNames;
+        for k,v in next, AllowedClassNames do
+            AllowedClassNames[v] = true;
+        end;
+
+        local Frame = createFrameFromInfo(Info);
+        local Values, update = createValuesFromFrame(Frame);
+
+        local function updateChild(Child, Info, SetToNil)
+            local Name = getNameObjectFromItem(Child).Text;
+            if not Api.Values[Name:upper()] then
+                return;
+            end;
+
+            local values = Info.values;
+            if not values then
+                values = (DatabasePets[Name] and Values.Pets) or Values.Knives;
+            end;
+            if SetToNil then
+                values[Name] = nil;
+                return;
+            end;
+
+            values[Name] = tonumber(Child:WaitForChild("Container"):WaitForChild("Amount").Text) or 1;
+        end;
+        local function childAdded(Child, Info)
+            if not AllowedClassNames[Child.ClassName] then
+                return;
+            end;
+            local function update()
+                updateChild(Child, Info, not Child.Visible);
+            end;
+
+            getNameObjectFromItem(Child):GetPropertyChangedSignal("Text"):Connect(update);
+            Child:GetPropertyChangedSignal("Visible"):Connect(update);
+            update();
+        end;
+        local function childRemoved(Child, Info)
+            if not AllowedClassNames[Child.ClassName] then
+                return;
+            end;
+
+            updateChild(Child, Info, true);
+        end;
+        for Container, Info in next, Containers do
+            -- second param for childAdded means that we can't just pass the function to Connect, so we make wrappers
+            if not Info.Both then
+                Info.Values = (Info.Weapons and Values.Knives) or Values.Pets;
+            end;
+            local function addChild(Child)
+                childAdded(Child, Info);
+            end;
+            local function removeChild(Child)
+                childRemoved(Child, Info);
+            end;
+
+            for _, Child in next, Container:GetChildren() do
+                addChild(Child);
+            end;
+            Container.ChildAdded:Connect(addChild);
+            Container.ChildRemoved:Connect(removeChild);
+        end;
+
+        table.insert(RefreshButtons, Frame.Refresh);
+        Frame.Refresh.MouseButton1Click:Connect(function()
+            requestRefresh();
+            update();
+        end);
+    end;
+
+    local WeaponInfo = {
+        Weapons = true
+    };
+    local PetInfo = {
+        Pets = true
+    };
+    local BothInfo = {
+        Both = true
+    };
+
+    local PlayerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui");
+    local function guiAdded(GUI)
+        do -- Inventory
+            local Inventory = GUI:WaitForChild("Game"):WaitForChild("Inventory"):WaitForChild("Main");
+            local WeaponsFrame = Inventory:WaitForChild("Weapons"):WaitForChild("Items"):WaitForChild("Container");
+            local Holiday = WeaponsFrame:WaitForChild("Holiday"):WaitForChild("Container");
+
+            addFrame(
+                {
+                    Parent = Inventory.Parent,
+                    SubTitle = {
+                        Text = "Inventory"
+                    },
+                    Position = UDim2.fromScale(1, 0)
+                },
+                {
+                    [WeaponsFrame:WaitForChild("Current"):WaitForChild("Container")] = WeaponInfo,
+                    [WeaponsFrame:WaitForChild("Classic"):WaitForChild("Container")] = WeaponInfo,
+                    [Holiday:WaitForChild("Halloween"):WaitForChild("Container")] = WeaponInfo,
+                    [Holiday:WaitForChild("Christmas"):WaitForChild("Container")] = WeaponInfo,
+
+                    [Inventory:WaitForChild("Pets"):WaitForChild("Items"):WaitForChild("Container"):WaitForChild("Current"):WaitForChild("Container")] = PetInfo
+                }
+            );
+        end;
+        do -- ViewProfile
+            local ViewProfile = GUI:WaitForChild("Game"):WaitForChild("ViewProfile"):WaitForChild("Main");
+            local WeaponsFrame = ViewProfile:WaitForChild("Weapons"):WaitForChild("Items"):WaitForChild("Container");
+            local Holiday = WeaponsFrame:WaitForChild("Holiday"):WaitForChild("Container");
+
+            addFrame(
+                {
+                    Parent = ViewProfile.Parent,
+                    SubTitle = {
+                        Text = "ViewProfile"
+                    },
+                    Position = UDim2.fromScale(1, 0)
+                },
+                {
+                    [WeaponsFrame:WaitForChild("Current"):WaitForChild("Container")] = WeaponInfo,
+                    [WeaponsFrame:WaitForChild("Classic"):WaitForChild("Container")] = WeaponInfo,
+                    [Holiday:WaitForChild("Halloween"):WaitForChild("Container")] = WeaponInfo,
+                    [Holiday:WaitForChild("Christmas"):WaitForChild("Container")] = WeaponInfo,
+
+                    [ViewProfile:WaitForChild("Pets"):WaitForChild("Items"):WaitForChild("Container"):WaitForChild("Current"):WaitForChild("Container")] = PetInfo
+                }
+            );
+        end;
+    end;
+    local function tradeGuiAdded(GUI)
+        do -- Trading
+            local Trade = GUI:WaitForChild("Container"):WaitForChild("Trade");
+
+            addFrame(
+                {
+                    Parent = Trade,
+                    SubTitle = {
+                        Text = "Trading Offering"
+                    },
+                    Position = UDim2.fromScale(-0.5, 0),
+                },
+                {
+                    [Trade:WaitForChild("YourOffer"):WaitForChild("Container")] = BothInfo,
+                }
+            );
+            addFrame(
+                {
+                    Parent = Trade,
+                    SubTitle = {
+                        Text = "Trading Receiving"
+                    },
+                    Position = UDim2.fromScale(1, 0),
+                },
+                {
+                    [Trade:WaitForChild("TheirOffer"):WaitForChild("Container")] = BothInfo,
+                }
+            );
+        end;
+    end;
+    if PlayerGui:FindFirstChild("MainGUI") then
+        guiAdded(PlayerGui.MainGUI);
+    end;
+    if PlayerGui:FindFirstChild("TradeGUI") then
+        tradeGuiAdded(PlayerGui.TradeGUI);
+    end;
+    PlayerGui.ChildAdded:Connect(function(Child)
+        if Child.Name == "MainGUI" then
+            guiAdded(Child);
+        elseif Child.Name == "TradeGUI" then
+            tradeGuiAdded(Child);
+        end;
+    end);
+end;
+
+print"Executed: Universal Value Calculator by Radeon#2501 Creds to TechHog";
